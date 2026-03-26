@@ -1,0 +1,993 @@
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="theme-color" content="#081220" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Nova Era Consultoria — Residência Legal no Paraguai</title>
+  <meta name="description"
+    content="Assessoria completa para brasileiros que desejam viver, investir ou abrir empresa no Paraguai." />
+  <script src="assets/resource_3fa48481346f.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-body: #081220;
+      --bg-surface: #0D1B2A;
+      --bg-card: #111F30;
+      --bg-card-hover: #152538;
+      --text-primary: #F0F2F5;
+      --text-secondary: #94A3B8;
+      --text-muted: #5A6B80;
+      --accent: #C9A24A;
+      --accent-soft: #D4B365;
+      --accent-glow: rgba(201, 162, 74, 0.12);
+      --accent-glow-strong: rgba(201, 162, 74, 0.25);
+      --border-subtle: rgba(201, 162, 74, 0.10);
+      --border-dim: rgba(255, 255, 255, 0.04);
+      --border-card: rgba(255, 255, 255, 0.06);
+      --shadow-card: 0 2px 20px rgba(0, 0, 0, 0.2);
+      --shadow-card-hover: 0 16px 48px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(201, 162, 74, 0.12);
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg-body);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Separator */
+    .curve-sep {
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='60' viewBox='0 0 20 60' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 1C18 1 1 15 1 30C1 45 18 59 18 59' stroke='%23C9A24A' stroke-width='0.5' stroke-linecap='round' stroke-opacity='0.3'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 20px;
+      height: 40px;
+    }
+
+    /* Glass */
+    .glass-main {
+      background: linear-gradient(180deg, rgba(13, 27, 42, 0.92) 0%, rgba(11, 22, 36, 0.88) 100%);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(201, 162, 74, 0.06);
+    }
+
+    /* Carousel */
+    .carousel-track {
+      animation: vscroll 14s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes vscroll {
+
+      0%,
+      22% {
+        transform: translateY(0);
+      }
+
+      33%,
+      55% {
+        transform: translateY(-33.33%);
+      }
+
+      66%,
+      88% {
+        transform: translateY(-66.66%);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* ---- Animations ---- */
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeSlideRight {
+      from {
+        opacity: 0;
+        transform: translateX(-16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes heroFloat {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes pulse-gold {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(201, 162, 74, 0.4);
+      }
+
+      50% {
+        box-shadow: 0 0 0 10px rgba(201, 162, 74, 0);
+      }
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: -200% center;
+      }
+
+      100% {
+        background-position: 200% center;
+      }
+    }
+
+    .anim-up {
+      opacity: 0;
+      animation: fadeSlideUp 0.9s var(--ease-out-expo) forwards;
+    }
+
+    .anim-right {
+      opacity: 0;
+      animation: fadeSlideRight 0.9s var(--ease-out-expo) forwards;
+    }
+
+    .d1 {
+      animation-delay: 0.08s;
+    }
+
+    .d2 {
+      animation-delay: 0.18s;
+    }
+
+    .d3 {
+      animation-delay: 0.3s;
+    }
+
+    .d4 {
+      animation-delay: 0.42s;
+    }
+
+    .d5 {
+      animation-delay: 0.56s;
+    }
+
+    .d6 {
+      animation-delay: 0.68s;
+    }
+
+    .sr {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+    }
+
+    .sr.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .step-card {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .step-card.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stats block hover */
+    .stat-block {
+      cursor: default;
+    }
+
+    .stat-val {
+      transition: transform 0.4s var(--ease-out-expo), filter 0.4s, text-shadow 0.4s;
+      will-change: transform;
+    }
+
+    .stat-block:hover .stat-val {
+      transform: scale(1.06);
+      filter: brightness(1.3);
+      text-shadow: 0 0 20px rgba(201, 162, 74, 0.5), 0 0 40px rgba(201, 162, 74, 0.2);
+    }
+
+    /* Hero widget hover */
+    .hero-widget {
+      transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s var(--ease-out-expo), border-color 0.4s;
+    }
+
+    .hero-widget:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(201, 162, 74, 0.15);
+      border-color: rgba(201, 162, 74, 0.2);
+    }
+
+    /* Dark Cards */
+    .dcard {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      transition: transform 0.55s var(--ease-out-expo), box-shadow 0.55s var(--ease-out-expo), border-color 0.55s var(--ease-out-expo), background 0.55s var(--ease-out-expo);
+    }
+
+    .dcard:hover {
+      transform: translateY(-5px);
+      background: var(--bg-card-hover);
+      border-color: rgba(201, 162, 74, 0.15);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .dcard .ic {
+      transition: transform 0.5s var(--ease-out-expo), opacity 0.3s;
+    }
+
+    .dcard:hover .ic {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+
+    /* Step Cards */
+    .scard {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      transition: transform 0.55s var(--ease-out-expo), box-shadow 0.55s var(--ease-out-expo), border-color 0.55s var(--ease-out-expo), background 0.55s var(--ease-out-expo);
+    }
+
+    .scard:hover {
+      transform: translateY(-5px);
+      background: var(--bg-card-hover);
+      border-color: rgba(201, 162, 74, 0.15);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .scard .sd {
+      transition: transform 0.35s var(--ease-out-expo);
+    }
+
+    .scard:hover .sd {
+      transform: scale(1.6);
+    }
+
+    /* Buttons */
+    .btn-main {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo), filter 0.3s;
+    }
+
+    .btn-main::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.15) 50%, transparent 100%);
+      background-size: 200% 100%;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .btn-main:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.08);
+      box-shadow: 0 20px 40px -10px rgba(201, 162, 74, 0.5), 0 0 60px -15px rgba(201, 162, 74, 0.3);
+    }
+
+    .btn-main:hover::after {
+      opacity: 1;
+      animation: shimmer 1.2s ease forwards;
+    }
+
+    .btn-ghost {
+      transition: transform 0.4s var(--ease-out-expo), background 0.3s, border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .btn-ghost:hover {
+      transform: translateY(-2px);
+      background: rgba(201, 162, 74, 0.08);
+      border-color: rgba(201, 162, 74, 0.2);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    /* WhatsApp Float */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+      transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo);
+      animation: fadeSlideUp 0.8s var(--ease-out-expo) 1.2s both;
+    }
+
+    .wa-float:hover {
+      transform: translateY(-5px) scale(1.06);
+      box-shadow: 0 14px 36px rgba(37, 211, 102, 0.45);
+    }
+
+    .wa-float::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      animation: pulse-gold 2.5s ease-in-out infinite;
+      background: transparent;
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.3);
+      animation-name: wa-ping;
+    }
+
+    @keyframes wa-ping {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.35);
+      }
+
+      50% {
+        box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+      }
+    }
+
+    /* Hero card */
+    .hero-vis {
+      animation: heroFloat 7s ease-in-out infinite;
+    }
+
+    /* Divider */
+    .divider {
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(to right, transparent, rgba(201, 162, 74, 0.15), transparent);
+    }
+
+    /* Grid Lines */
+    .gridline {
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent 0%, rgba(201, 162, 74, 0.04) 20%, rgba(201, 162, 74, 0.04) 80%, transparent 100%);
+    }
+  </style>
+  <script>tailwind.config = { theme: { extend: {} }, plugins: [] };</script>
+</head>
+
+<body class="min-h-screen relative">
+
+  <!-- WhatsApp Float -->
+  <a class="wa-float"
+    href="https://wa.me/55XXXXXXXXXX?text=Ol%C3%A1%20gostaria%20de%20entender%20como%20funciona%20a%20resid%C3%AAncia%20no%20Paraguai"
+    target="_blank" rel="noopener" aria-label="Contato WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="#fff">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <main
+    class="glass-main overflow-hidden flex flex-col max-w-[1300px] mx-auto xl:rounded-[2.5rem] xl:my-8 min-h-screen xl:min-h-[700px] w-full relative"
+    style="padding:clamp(1.5rem,4vw,3rem);">
+
+    <!-- Grid Lines -->
+    <div class="absolute inset-0 flex justify-between pointer-events-none z-0 w-full h-full"
+      style="padding:0 clamp(1.5rem,4vw,3rem);">
+      <div class="gridline"></div>
+      <div class="gridline hidden md:block"></div>
+      <div class="gridline hidden lg:block"></div>
+      <div class="gridline hidden xl:block"></div>
+      <div class="gridline"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="flex z-10 mb-14 md:mb-20 relative items-center justify-between anim-up">
+      <div class="flex flex-col justify-center gap-[3px]">
+        <span class="font-bold text-[1.15rem] leading-none tracking-[0.08em]" style="color:var(--accent);">NOVA
+          ERA</span>
+        <span class="w-full h-[1px]"
+          style="background:linear-gradient(90deg,var(--accent),transparent);opacity:0.5;"></span>
+        <span class="font-medium text-[0.58rem] leading-none tracking-[0.14em]"
+          style="color:var(--text-muted);">CONSULTORIA</span>
+      </div>
+      <nav
+        class="hidden md:flex uppercase text-[11px] font-medium tracking-[0.15em] rounded-full py-2.5 px-7 gap-x-8 items-center"
+        style="background:rgba(13,27,42,0.65);border:1px solid var(--border-card);backdrop-filter:blur(12px);color:var(--text-muted);">
+        <a class="hover:text-[var(--accent)] transition-colors duration-400" href="#beneficios">Benefícios</a>
+        <a class="hover:text-[var(--accent)] transition-colors duration-400" href="#processo">Processo</a>
+        <a class="hover:text-[var(--accent)] transition-colors duration-400" href="#whatsapp">Contato</a>
+      </nav>
+      <a class="btn-ghost flex items-center gap-2 group text-[11px] font-semibold tracking-wide rounded-full py-2.5 px-5"
+        href="https://wa.me/55XXXXXXXXXX?text=Ol%C3%A1%20gostaria%20de%20entender%20como%20funciona%20a%20resid%C3%AAncia%20no%20Paraguai"
+        target="_blank"
+        style="background:rgba(201,162,74,0.06);border:1px solid rgba(201,162,74,0.12);color:var(--accent);">
+        <span class="uppercase tracking-tight">Falar Conosco</span>
+        <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-300" fill="none"
+          stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24">
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
+      </a>
+    </header>
+
+    <!-- HERO -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 flex-grow relative z-10 pb-10 lg:pb-0">
+      <!-- Left -->
+      <div class="lg:col-span-7 flex flex-col justify-center relative">
+        <!-- Social proof pill -->
+        <div class="anim-up d1 inline-flex w-max rounded-full mb-10 py-2 pr-5 pl-2 items-center gap-3"
+          style="background:rgba(201,162,74,0.05);border:1px solid rgba(201,162,74,0.08);">
+          <div class="flex -space-x-2">
+            <img alt="" class="w-7 h-7 rounded-full object-cover" style="border:2px solid var(--bg-surface);"
+              src="assets/578a5bc5-2c9f-4285-8ae6-0d7daf_33d785f5e92f.webp" />
+            <img alt="" class="w-7 h-7 rounded-full object-cover" style="border:2px solid var(--bg-surface);"
+              src="assets/1a99aa12-9c50-44fe-bb7d-5dfef2_d7bfbddcb034.webp" />
+            <img alt="" class="w-7 h-7 rounded-full object-cover" style="border:2px solid var(--bg-surface);"
+              src="assets/2e91b8c7-be64-41b5-8bd8-75efab_c57d7cf9ede8.webp" />
+            <div class="w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-bold"
+              style="border:2px solid var(--bg-surface);background:var(--accent);color:var(--bg-body);">5★</div>
+          </div>
+          <span class="text-xs font-medium" style="color:var(--text-secondary);"><span
+              style="color:var(--accent);font-weight:600;">22mil+</span> clientes atendidos</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="anim-up d2 leading-[0.92] lg:text-[5.2rem] text-[3rem] font-semibold tracking-[-0.04em] mb-6">
+          <span style="color:var(--text-primary);">Sua Residência</span><br />
+          <span style="color:var(--accent);">Legal no Paraguai</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="anim-up d3 text-[15px] max-w-lg mb-8 leading-[1.7] tracking-wide"
+          style="color:var(--text-secondary);border-left:2px solid var(--accent);padding-left:1.5rem;">
+          Assessoria completa para pessoas e empresas que desejam viver ou investir no Paraguai — Residência, abertura
+          de empresas, contabilidade e suporte operacional com equipe local.
+        </p>
+        <!-- Trust Badges -->
+        <div class="anim-up d3 flex flex-wrap gap-2 mb-12">
+          <span class="text-[11px] font-medium rounded-full py-1.5 px-4"
+            style="background:rgba(201,162,74,0.06);border:1px solid rgba(201,162,74,0.1);color:var(--accent);">Atendimento
+            em Português</span>
+          <span class="text-[11px] font-medium rounded-full py-1.5 px-4"
+            style="background:rgba(201,162,74,0.06);border:1px solid rgba(201,162,74,0.1);color:var(--accent);">Sem
+            Taxas Escondidas</span>
+          <span class="text-[11px] font-medium rounded-full py-1.5 px-4"
+            style="background:rgba(201,162,74,0.06);border:1px solid rgba(201,162,74,0.1);color:var(--accent);">Presença
+            no Paraguai</span>
+          <span class="text-[11px] font-medium rounded-full py-1.5 px-4"
+            style="background:rgba(201,162,74,0.06);border:1px solid rgba(201,162,74,0.1);color:var(--accent);">Compliance</span>
+          <span class="text-[11px] font-medium rounded-full py-1.5 px-4"
+            style="background:rgba(201,162,74,0.06);border:1px solid rgba(201,162,74,0.1);color:var(--accent);">Segurança
+            Jurídica</span>
+        </div>
+
+        <!-- CTAs -->
+        <div class="anim-up d4 flex flex-col sm:flex-row gap-4 mb-20 lg:mb-28">
+          <!-- Primary -->
+          <a href="https://wa.me/55XXXXXXXXXX?text=Ol%C3%A1%20gostaria%20de%20entender%20como%20funciona%20a%20resid%C3%AAncia%20no%20Paraguai"
+            target="_blank"
+            class="btn-main inline-flex group items-center gap-4 text-[15px] font-semibold rounded-full py-4 px-8"
+            style="background:linear-gradient(135deg,#E2C563 0%,#C9A24A 40%,#A8852F 100%);color:var(--bg-body);box-shadow:0 16px 32px -8px rgba(201,162,74,0.45),inset 0 1px 0 rgba(255,255,255,0.25);">
+            <span class="tracking-[-0.01em]">Falar com Especialista</span>
+            <span class="flex items-center justify-center w-8 h-8 rounded-full" style="background:rgba(0,0,0,0.12);">
+              <svg class="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300"
+                fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" viewBox="0 0 24 24" width="16">
+                <path d="M7 7h10v10" />
+                <path d="M7 17 17 7" />
+              </svg>
+            </span>
+          </a>
+          <!-- Secondary -->
+          <a href="#processo"
+            class="btn-ghost inline-flex items-center gap-2 text-[14px] font-medium rounded-full py-4 px-7"
+            style="background:rgba(201,162,74,0.04);border:1px solid rgba(201,162,74,0.12);color:var(--accent);">
+            <span class="tracking-tight">Como Funciona</span>
+            <svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="1.5" viewBox="0 0 24 24" width="15">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="anim-up d5 flex flex-wrap gap-4 md:gap-8 mt-auto items-center">
+          <div class="flex items-center group cursor-default">
+            <div class="text-center px-1">
+              <p class="text-[10px] font-semibold uppercase tracking-[0.15em] mb-1.5 group-hover:text-[var(--accent)] transition-colors duration-400"
+                style="color:var(--text-muted);">Clientes</p>
+              <p class="text-sm font-semibold" style="color:var(--text-primary);">22mil+</p>
+            </div>
+            <div class="curve-sep opacity-50 ml-4 md:ml-8"></div>
+          </div>
+          <div class="flex items-center group cursor-default">
+            <div class="text-center px-1">
+              <p class="text-[10px] font-semibold uppercase tracking-[0.15em] mb-1.5 group-hover:text-[var(--accent)] transition-colors duration-400"
+                style="color:var(--text-muted);">Aprovação</p>
+              <p class="text-sm font-semibold" style="color:var(--text-primary);">100%</p>
+            </div>
+            <div class="curve-sep opacity-50 ml-4 md:ml-8"></div>
+          </div>
+          <div class="flex items-center group cursor-default">
+            <div class="text-center px-1">
+              <p class="text-[10px] font-semibold uppercase tracking-[0.15em] mb-1.5 group-hover:text-[var(--accent)] transition-colors duration-400"
+                style="color:var(--text-muted);">Avaliação</p>
+              <p class="text-sm font-semibold" style="color:var(--text-primary);">5★ Google</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Hero Visual -->
+      <div class="lg:col-span-5 h-full min-h-[420px] lg:min-h-0 relative group anim-up d3">
+        <div class="hero-vis absolute inset-0 rounded-[2rem] overflow-hidden transition-all duration-700"
+          style="border:1px solid rgba(201,162,74,0.1);box-shadow:0 30px 70px rgba(0,0,0,0.45),0 0 0 1px rgba(201,162,74,0.06);">
+          <img alt="Ponte da Amizade — Ciudad del Este, Paraguai"
+            class="transition-transform duration-[2.5s] ease-out group-hover:scale-[1.08] w-full h-full object-cover object-center absolute inset-0"
+            style="filter:saturate(0.9) brightness(0.8) contrast(1.05);"
+            src="https://images.unsplash.com/photo-1619546952812-520e98064a52?w=1280&q=80&fit=crop" />
+          <!-- Overlay -->
+          <div class="absolute inset-0"
+            style="background:linear-gradient(170deg, rgba(8,18,32,0.1) 0%, rgba(8,18,32,0.25) 40%, rgba(8,18,32,0.92) 100%);">
+          </div>
+          <!-- Inner Content -->
+          <div class="flex flex-col p-7 lg:p-8 absolute inset-0 justify-between">
+            <!-- Top Badge -->
+            <div class="flex items-start justify-between">
+              <div class="flex gap-2 rounded-full py-1.5 px-3.5 items-center"
+                style="background:rgba(13,27,42,0.5);border:1px solid rgba(201,162,74,0.12);backdrop-filter:blur(8px);">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
+                    style="background:#25D366;"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2" style="background:#25D366;"></span>
+                </span>
+                <span class="text-[10px] uppercase font-semibold tracking-[0.1em]"
+                  style="color:var(--accent-soft);">Presença Local</span>
+              </div>
+              <a href="https://wa.me/55XXXXXXXXXX?text=Ol%C3%A1%20gostaria%20de%20entender%20como%20funciona%20a%20resid%C3%AAncia%20no%20Paraguai"
+                target="_blank"
+                class="flex hover:scale-110 transition-transform duration-300 cursor-pointer w-10 h-10 rounded-full items-center justify-center"
+                style="background:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.2);backdrop-filter:blur(8px);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#25D366">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Floating Widget -->
+            <div class="hero-widget self-end w-full max-w-[240px] rounded-2xl p-5 mt-auto cursor-default"
+              style="background:rgba(13,27,42,0.75);border:1px solid rgba(201,162,74,0.1);backdrop-filter:blur(16px);">
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold"
+                    style="background:var(--accent);color:var(--bg-body);">✓</div>
+                  <span class="text-xs font-semibold" style="color:var(--text-primary);">Processo</span>
+                </div>
+                <span class="text-[10px] font-mono font-semibold" style="color:#25D366;">100%</span>
+              </div>
+              <div class="h-11 w-full mb-3 flex items-end gap-1">
+                <div class="w-1/5 rounded-t h-[35%]" style="background:rgba(201,162,74,0.1);"></div>
+                <div class="w-1/5 rounded-t h-[60%]" style="background:rgba(201,162,74,0.15);"></div>
+                <div class="w-1/5 rounded-t h-[45%]" style="background:rgba(201,162,74,0.12);"></div>
+                <div class="w-1/5 rounded-t h-[80%]" style="background:rgba(201,162,74,0.2);"></div>
+                <div class="w-1/5 rounded-t h-[95%]"
+                  style="background:var(--accent);box-shadow:0 0 16px rgba(201,162,74,0.35);"></div>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-[9px] uppercase tracking-[0.12em]"
+                  style="color:var(--text-muted);">Acompanhamento</span>
+                <span class="text-sm font-mono font-semibold" style="color:var(--text-primary);">Do Início ao Fim</span>
+              </div>
+            </div>
+
+            <!-- Testimonial Carousel -->
+            <div class="overflow-hidden w-full h-[96px] rounded-xl pt-4 mt-4 relative"
+              style="border-top:1px solid rgba(201,162,74,0.08);">
+              <div class="carousel-track flex flex-col h-[288px]">
+                <div class="flex flex-col h-[96px] justify-start">
+                  <div class="flex gap-3 mb-2 items-center">
+                    <img alt="" class="w-8 h-8 rounded-full object-cover"
+                      style="border:1px solid rgba(201,162,74,0.15);"
+                      src="assets/7b1ee7e8-7554-433d-a435-029da3_9bd09ac29fdb.webp" />
+                    <div><span class="text-xs font-semibold tracking-wide block"
+                        style="color:var(--text-primary);">Carlos Mendes</span><span
+                        class="text-[9px] uppercase tracking-[0.1em]"
+                        style="color:var(--text-muted);">Empreendedor</span></div>
+                  </div>
+                  <p class="text-xs leading-relaxed line-clamp-2" style="color:var(--text-secondary);">"Processo rápido
+                    e organizado. Me acompanharam em cada etapa em Ciudad del Este."</p>
+                </div>
+                <div class="flex flex-col h-[96px] justify-start">
+                  <div class="flex gap-3 mb-2 items-center">
+                    <img alt="" class="w-8 h-8 rounded-full object-cover"
+                      style="border:1px solid rgba(201,162,74,0.15);"
+                      src="assets/b3f17582-5cb8-4efd-895a-b59c93_5343306160e6.webp" />
+                    <div><span class="text-xs font-semibold tracking-wide block" style="color:var(--text-primary);">Ana
+                        Souza</span><span class="text-[9px] uppercase tracking-[0.1em]"
+                        style="color:var(--text-muted);">Investidora</span></div>
+                  </div>
+                  <p class="text-xs leading-relaxed line-clamp-2" style="color:var(--text-secondary);">"Atendimento em
+                    português, suporte local e total transparência. Recomendo."</p>
+                </div>
+                <div class="flex flex-col h-[96px] justify-start">
+                  <div class="flex gap-3 mb-2 items-center">
+                    <img alt="" class="w-8 h-8 rounded-full object-cover"
+                      style="border:1px solid rgba(201,162,74,0.15);"
+                      src="assets/08cf0e21-ab10-49b1-b896-e0bfbc_49a8ee583926.webp" />
+                    <div><span class="text-xs font-semibold tracking-wide block"
+                        style="color:var(--text-primary);">Roberto Lima</span><span
+                        class="text-[9px] uppercase tracking-[0.1em]" style="color:var(--text-muted);">Empresário</span>
+                    </div>
+                  </div>
+                  <p class="text-xs leading-relaxed line-clamp-2" style="color:var(--text-secondary);">"Abri minha
+                    empresa no Paraguai com todo o suporte. Processo sem burocracia."</p>
+                </div>
+              </div>
+              <div class="absolute inset-x-0 top-0 h-6 pointer-events-none"
+                style="background:linear-gradient(to bottom,rgba(8,18,32,0.7),transparent);"></div>
+              <div class="absolute inset-x-0 bottom-0 h-8 pointer-events-none"
+                style="background:linear-gradient(to top,rgba(8,18,32,0.85),transparent);"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="divider" style="margin:clamp(3rem,6vw,5rem) 0;"></div>
+
+    <!-- BENEFITS -->
+    <section id="beneficios" class="flex flex-col gap-12 z-10 w-full relative sr">
+      <div class="max-w-2xl px-1">
+        <h2 class="md:text-5xl text-3xl font-semibold tracking-[-0.03em] mb-4" style="color:var(--text-primary);">Por
+          que o <span style="color:var(--accent);">Paraguai?</span></h2>
+        <p class="text-[15px] leading-relaxed" style="color:var(--text-secondary);">O Paraguai oferece um ambiente
+          favorável ao empreendedorismo, com regras claras, incentivos legais e infraestrutura ideal para brasileiros.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-[2rem] overflow-hidden gap-[1px]"
+        style="background:var(--border-card);">
+        <div class="dcard p-8 flex flex-col min-h-[280px] border-0 sr sr-stagger" style="--i:0;">
+          <div class="mb-4"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+              viewBox="0 0 24 24" style="color:var(--accent);opacity:0.7;">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor" />
+            </svg></div>
+          <h3 class="text-[17px] font-semibold tracking-tight mb-2" style="color:var(--text-primary);">Processo
+            Simplificado</h3>
+          <p class="text-sm leading-[1.7]" style="color:var(--text-secondary);">Estabeleça sua residência no Paraguai
+            com orientação administrativa adequada e acompanhamento especializado em todo o processo.</p>
+        </div>
+        <div class="dcard p-8 flex flex-col min-h-[280px] border-0 sr sr-stagger" style="--i:1;">
+          <div class="mb-4"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+              viewBox="0 0 24 24" style="color:var(--accent);opacity:0.7;">
+              <path
+                d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"
+                fill="currentColor" />
+            </svg></div>
+          <h3 class="text-[17px] font-semibold tracking-tight mb-2" style="color:var(--text-primary);">Impostos
+            Reduzidos</h3>
+          <p class="text-sm leading-[1.7]" style="color:var(--text-secondary);">O Paraguai possui uma das cargas
+            tributárias mais competitivas da América Latina, com impostos simplificados e alíquotas que favorecem
+            investidores e empreendedores.</p>
+        </div>
+        <div class="dcard p-8 flex flex-col min-h-[280px] border-0 sr sr-stagger" style="--i:2;">
+          <div class="mb-4"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+              viewBox="0 0 24 24" style="color:var(--accent);opacity:0.7;">
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                fill="currentColor" />
+            </svg></div>
+          <h3 class="text-[17px] font-semibold tracking-tight mb-2" style="color:var(--text-primary);">Proximidade do
+            Brasil</h3>
+          <p class="text-sm leading-[1.7]" style="color:var(--text-secondary);">Fronteira terrestre com o Brasil, voos
+            diretos e facilidade de deslocamento a qualquer momento.</p>
+        </div>
+        <div class="dcard p-8 flex flex-col min-h-[280px] border-0 sr sr-stagger" style="--i:3;">
+          <div class="mb-4"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+              viewBox="0 0 24 24" style="color:var(--accent);opacity:0.7;">
+              <path
+                d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"
+                fill="currentColor" />
+            </svg></div>
+          <h3 class="text-[17px] font-semibold tracking-tight mb-2" style="color:var(--text-primary);">Ambiente de
+            Negócios</h3>
+          <p class="text-sm leading-[1.7]" style="color:var(--text-secondary);">Atue no Paraguai em um ambiente
+            favorável ao empreendedorismo, com regras claras, incentivos legais e estrutura adequada para novos
+            negócios.</p>
+        </div>
+        <div class="dcard p-8 flex flex-col min-h-[280px] border-0 sr sr-stagger" style="--i:4;">
+          <div class="mb-4"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+              viewBox="0 0 24 24" style="color:var(--accent);opacity:0.7;">
+              <path
+                d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"
+                fill="currentColor" />
+            </svg></div>
+          <h3 class="text-[17px] font-semibold tracking-tight mb-2" style="color:var(--text-primary);">Rapidez no
+            Processo</h3>
+          <p class="text-sm leading-[1.7]" style="color:var(--text-secondary);">Processo organizado e eficiente para
+            obtenção da residência, com etapas claras e acompanhamento até a conclusão.</p>
+        </div>
+        <div class="dcard p-8 flex flex-col min-h-[280px] border-0 sr sr-stagger" style="--i:5;">
+          <div class="mb-4"><svg class="ic" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+              viewBox="0 0 24 24" style="color:var(--accent);opacity:0.7;">
+              <path
+                d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                fill="currentColor" />
+            </svg></div>
+          <h3 class="text-[17px] font-semibold tracking-tight mb-2" style="color:var(--text-primary);">Comunidade
+            Brasileira</h3>
+          <p class="text-sm leading-[1.7]" style="color:var(--text-secondary);">Mais de 400 mil brasileiros já vivem no
+            Paraguai, com ampla rede de apoio e serviços.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="divider" style="margin:clamp(3rem,6vw,5rem) 0;"></div>
+
+    <!-- INSTITUTIONAL VISUAL -->
+    <div class="stat-block sr relative w-full rounded-[2rem] overflow-hidden"
+      style="height:240px;border:1px solid var(--border-card);">
+      <img alt="Paraguai — Institucional" class="w-full h-full object-cover object-center absolute inset-0"
+        style="filter:saturate(0.85) brightness(0.7) contrast(1.05);"
+        src="C:/Users/rrps2/.gemini/antigravity/brain/3391bf22-f899-450d-b818-be082267a71c/paraguai_institucional_1773453180753.png" />
+      <div class="absolute inset-0"
+        style="background:linear-gradient(90deg, rgba(8,18,32,0.85) 0%, rgba(8,18,32,0.4) 50%, rgba(8,18,32,0.85) 100%);">
+      </div>
+      <div class="absolute inset-0 flex items-center justify-center gap-8 px-8">
+        <div class="text-center">
+          <p class="stat-val text-3xl font-semibold" style="color:var(--accent);">22mil+</p>
+          <p class="text-[11px] uppercase tracking-[0.15em] mt-1" style="color:var(--text-secondary);">clientes
+            atendidos</p>
+        </div>
+        <div class="w-px h-12" style="background:rgba(201,162,74,0.2);"></div>
+        <div class="text-center">
+          <p class="stat-val text-3xl font-semibold" style="color:var(--accent);">100%</p>
+          <p class="text-[11px] uppercase tracking-[0.15em] mt-1" style="color:var(--text-secondary);">processos
+            aprovados</p>
+        </div>
+        <div class="w-px h-12" style="background:rgba(201,162,74,0.2);"></div>
+        <div class="text-center">
+          <p class="stat-val text-3xl font-semibold" style="color:var(--accent);">5★</p>
+          <p class="text-[11px] uppercase tracking-[0.15em] mt-1" style="color:var(--text-secondary);">avaliação Google
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="divider" style="margin:clamp(3rem,6vw,5rem) 0;"></div>
+
+    <!-- PROCESS -->
+    <section id="processo" class="flex flex-col gap-12 z-10 w-full relative mb-16">
+      <div class="max-w-2xl px-1 sr">
+        <h2 class="md:text-5xl text-3xl font-semibold tracking-[-0.03em] mb-4" style="color:var(--text-primary);">Como
+          <span style="color:var(--accent);">Funciona</span></h2>
+        <p class="text-[15px] leading-relaxed" style="color:var(--text-secondary);">Um processo claro e acompanhado do
+          início ao fim para garantir sua residência legal no Paraguai.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded-[2rem] gap-[1px]"
+        style="background:var(--border-card);">
+        <div class="scard p-8 flex flex-col gap-4 min-h-[340px] border-0 step-card">
+          <div class="text-[10px] font-bold tracking-[0.15em] uppercase" style="color:var(--accent);">Etapa 1 de 6</div>
+          <h3 class="text-xl tracking-tight font-semibold" style="color:var(--text-primary);">Análise de Elegibilidade
+          </h3>
+          <p class="text-sm leading-[1.7] mb-2" style="color:var(--text-secondary);">Avaliação de perfil e documentação
+            para definir o melhor caminho para obtenção da residência.</p>
+          <ul class="text-sm space-y-2.5 mt-auto" style="color:var(--text-secondary);">
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Revisão completa de documentos pessoais
+            </li>
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Verificação de antecedentes
+            </li>
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Plano personalizado de ação
+            </li>
+          </ul>
+        </div>
+        <div class="scard p-8 flex flex-col gap-4 min-h-[340px] border-0 step-card">
+          <div class="text-[10px] font-bold tracking-[0.15em] uppercase" style="color:var(--accent);">Etapa 2 de 6</div>
+          <h3 class="text-xl tracking-tight font-semibold" style="color:var(--text-primary);">Apostilamento e Tradução
+          </h3>
+          <p class="text-sm leading-[1.7] mb-2" style="color:var(--text-secondary);">Orientação sobre apostilamento de
+            Haia no Brasil e tradução juramentada para o espanhol.</p>
+          <ul class="text-sm space-y-2.5 mt-auto" style="color:var(--text-secondary);">
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Apostilamento de Haia no Brasil
+            </li>
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Tradução juramentada oficial
+            </li>
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Validação de certidões
+            </li>
+          </ul>
+        </div>
+        <div class="scard p-8 flex flex-col gap-4 min-h-[340px] border-0 step-card">
+          <div class="text-[10px] font-bold tracking-[0.15em] uppercase" style="color:var(--accent);">Etapa 3 de 6</div>
+          <h3 class="text-xl tracking-tight font-semibold" style="color:var(--text-primary);">Viagem ao Paraguai</h3>
+          <p class="text-sm leading-[1.7] mb-2" style="color:var(--text-secondary);">Agendamos sua viagem e acompanhamos
+            você presencialmente em Ciudad del Este. Cuidamos da logística para que você se preocupe apenas em
+            aproveitar a experiência.</p>
+          <ul class="text-sm space-y-2.5 mt-auto" style="color:var(--text-secondary);">
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Agenda otimizada em Ciudad del Este
+            </li>
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Acompanhamento presencial
+            </li>
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Suporte logístico completo
+            </li>
+          </ul>
+        </div>
+        <div class="scard p-8 flex flex-col gap-4 min-h-[340px] border-0 step-card">
+          <div class="text-[10px] font-bold tracking-[0.15em] uppercase" style="color:var(--accent);">Etapa 4 de 6</div>
+          <h3 class="text-xl tracking-tight font-semibold" style="color:var(--text-primary);">Protocolo e Acompanhamento
+          </h3>
+          <p class="text-sm leading-[1.7] mb-2" style="color:var(--text-secondary);">Acompanhamos o protocolo do
+            processo junto aos órgãos competentes e monitoramos cada etapa com suporte local, garantindo mais clareza,
+            segurança e organização.</p>
+          <ul class="text-sm space-y-2.5 mt-auto" style="color:var(--text-secondary);">
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Protocolo documental
+            </li>
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Acompanhamento do andamento
+            </li>
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Suporte operacional local
+            </li>
+          </ul>
+        </div>
+        <div class="scard p-8 flex flex-col gap-4 min-h-[340px] border-0 step-card">
+          <div class="text-[10px] font-bold tracking-[0.15em] uppercase" style="color:var(--accent);">Etapa 5 de 6</div>
+          <h3 class="text-xl tracking-tight font-semibold" style="color:var(--text-primary);">Emissão da Cédula /
+            Residência Temporária</h3>
+          <p class="text-sm leading-[1.7] mb-2" style="color:var(--text-secondary);">Acompanhamos a etapa de
+            documentação e emissão correspondente ao processo migratório, garantindo orientação em cada fase até a
+            formalização da residência temporária.</p>
+          <ul class="text-sm space-y-2.5 mt-auto" style="color:var(--text-secondary);">
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Agendamento biométrico
+            </li>
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Emissão documental correspondente
+            </li>
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Residência temporária válida por 2 anos
+            </li>
+          </ul>
+        </div>
+        <div class="scard p-8 flex flex-col gap-4 min-h-[340px] border-0 step-card">
+          <div class="text-[10px] font-bold tracking-[0.15em] uppercase" style="color:var(--accent);">Etapa 6 de 6</div>
+          <h3 class="text-xl tracking-tight font-semibold" style="color:var(--text-primary);">Conclusão e Suporte
+            Contínuo</h3>
+          <p class="text-sm leading-[1.7] mb-2" style="color:var(--text-secondary);">Após a emissão, orientamos os
+            próximos passos para que você possa atuar com mais segurança, organização e tranquilidade no Paraguai.</p>
+          <ul class="text-sm space-y-2.5 mt-auto" style="color:var(--text-secondary);">
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Entrega das orientações finais
+            </li>
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Suporte pós-emissão
+            </li>
+            <li class="flex items-start gap-2.5">
+              <div class="sd w-1.5 h-1.5 rounded-full mt-[7px] flex-shrink-0" style="background:var(--accent);"></div>
+              Direcionamento para próximos passos
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    (function () {
+      /* Generic scroll reveal for .sr elements */
+      var srs = document.querySelectorAll('.sr');
+      var ob1 = new IntersectionObserver(function (entries) {
+        for (var i = 0; i < entries.length; i++) {
+          if (entries[i].isIntersecting) {
+            entries[i].target.classList.add('is-visible');
+            ob1.unobserve(entries[i].target);
+          }
+        }
+      }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+      for (var j = 0; j < srs.length; j++) { ob1.observe(srs[j]); }
+
+      /* Sequential reveal for .step-card elements */
+      var cards = document.querySelectorAll('.step-card');
+      var staggerCount = 0;
+      var resetTimer;
+
+      var ob2 = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var card = entry.target;
+            ob2.unobserve(card);
+
+            /* Apply staggered delay dynamically based on how many cards are queued */
+            if (staggerCount > 0) {
+              card.style.transitionDelay = (staggerCount * 120) + 'ms';
+            }
+
+            /* Force reflow slightly then add class */
+            requestAnimationFrame(function () {
+              card.classList.add('is-visible');
+            });
+
+            staggerCount++;
+            /* Reset counter after sequence finishes so later scrolls restart at 0 delay */
+            clearTimeout(resetTimer);
+            resetTimer = setTimeout(function () {
+              staggerCount = 0;
+            }, 300);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      for (var c = 0; c < cards.length; c++) {
+        ob2.observe(cards[c]);
+      }
+    })();
+  </script>
+</body>
+
+</html>
